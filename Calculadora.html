@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!-- saved from url=(0053)file:///C:/Users/nelso/Desktop/FIRE%20DOOM/index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" type="image/x-incon" href="file:///C:/Users/nelso/Desktop/FIRE%20DOOM/IPA.ico">
+  <title>Arthur Lara</title>
+  <style> 
+    html {
+      background-image: linear-gradient(45deg, yellow, green);
+    }
+    .Calculadora {
+      background-color: rgba(0, 0, 0, 0.4);
+      position: absolute;
+      padding: 15px;
+      border-radius: 15px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    h1 {
+      color: white;
+
+    }
+  </style>
+  </head><body>
+    <div class="Calculadora">
+      <h1>Calculadora</h1> <!----Para criar uma palavra use h1, h2, h3, h4, h5 ou h6-->
+
+      <input type="number" id="n1"> <!--INPUT usados para escrever somente para NUMBER ou NUMEROS-->
+
+      <br><br>
+
+      <input type="number" id="n2">
+
+      <br><br>
+
+      <button onclick="Somar()">Somar</button> <!--Butão-->
+      <button onclick="Menos()">Subtrair</button>
+
+      <br><br>
+
+      <button onclick="Vezes()">Multiplicar</button>
+      <button onclick="Dividir()">Dividir</button>
+      <h1 id="Resposta">Resultado</h1>
+      
+      
+    </div>
+  
+  <script>
+
+    var n1, n2, res;
+
+    function Somar() {
+      n1 = parseInt(document.getElementById("n1").value)
+      n2 = parseInt(document.getElementById("n2").value)
+      res = n1 + n2;
+      document.getElementById("Resposta").innerText = res;
+    }
+    function Menos() {
+      n1 = parseInt(document.getElementById("n1").value)
+      n2 = parseInt(document.getElementById("n2").value)
+      res = n1 - n2;
+      document.getElementById("Resposta").innerText = res;
+    }
+    function Vezes() {
+      n1 = parseInt(document.getElementById("n1").value)
+      n2 = parseInt(document.getElementById("n2").value)
+      res = n1 * n2;
+      document.getElementById("Resposta").innerText = res;
+    }
+    function Dividir() {
+      n1 = parseInt(document.getElementById("n1").value)
+      n2 = parseInt(document.getElementById("n2").value)
+      res = n1 / n2;
+      document.getElementById("Resposta").innerText = res;
+
+    }
+  </script>
+</body></html>
